@@ -1,0 +1,15 @@
+{
+  "name": "medstocksy-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page for MedStocksy - Pharmacy CRM & Inventory Management",
+  "private": true,
+  "scripts": {
+    "dev": "serve dashboard",
+    "build": "echo 'Static site - no build required'",
+    "start": "serve dashboard"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
