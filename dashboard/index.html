@@ -196,6 +196,30 @@
         .privacy-modal-content > div::-webkit-scrollbar {
             display: none;
         }
+        .cancellation-modal-backdrop {
+            background: rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .cancellation-modal-content {
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.6);
+        }
+        .dark .cancellation-modal-content {
+            background: rgba(36, 45, 82, 0.55);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+        }
+        .cancellation-modal-content > div {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .cancellation-modal-content > div::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-[#F4F7FE] dark:bg-[#1a2847] text-text-main font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white relative">
@@ -204,10 +228,10 @@
         <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-success/15 rounded-full blur-[120px] animate-pulse" style="animation-duration: 4s"></div>
         <div class="absolute top-[20%] right-[-5%] w-[30%] h-[30%] bg-warning/10 rounded-full blur-[100px]"></div>
     </div>
-<nav class="glass dark:glass rounded-2xl md:rounded-full px-4 py-2 flex items-center justify-between w-[95%] xl:max-w-7xl transition-all duration-300 shadow-lg fixed top-4 left-1/2 -translate-x-1/2 z-50">
+<nav class="glass dark:glass rounded-2xl md:rounded-full px-3 sm:px-5 md:px-8 py-2 sm:py-2.5 md:py-3 flex items-center justify-between w-full max-w-[98%] sm:max-w-[95%] xl:max-w-7xl transition-all duration-300 shadow-lg shadow-primary/5 dark:shadow-primary/10 fixed top-0 left-0 right-0 z-50 m-2 sm:m-3 md:m-4 left-1/2 -translate-x-1/2">
 <div class="flex items-center gap-3 sm:gap-4 min-w-fit">
-    <a href="/" class="flex items-center gap-3 no-underline">
-        <img src="../dashboard/assets/medstocky.png" alt="MedStocksy logo" class="h-9 sm:h-10 md:h-11 w-auto rounded-md shadow-sm"/>
+    <a href="./index.html" class="flex items-center gap-3 no-underline">
+        <img src="pages/medstocky.png" alt="MedStocksy logo" class="h-9 sm:h-10 md:h-11 w-auto rounded-md shadow-sm"/>
         <div class="flex flex-col leading-none">
             <span class="text-sm sm:text-base md:text-lg lg:text-xl font-black tracking-tight text-text-main dark:text-white">MedStocksy</span>
             <span class="text-[7px] sm:text-[8px] md:text-[9px] font-bold uppercase tracking-widest" style="background: linear-gradient(135deg, #7B5CFA 0%, #6A4DE6 50%, #4F3CC9 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">Built For Pharmacy</span>
@@ -267,13 +291,16 @@ Pricing
 
 <div class="my-1 border-t border-white/10 dark:border-white/5"></div>
 
-<a onclick="openPrivacyModal(event)" class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1 cursor-pointer" href="#">
+<a onclick="openPrivacyModal(event)" class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1 cursor-pointer" href="pages/privacy.html">
 <span class="material-symbols-outlined text-base align-middle mr-2">privacy_tip</span> Privacy & Policy
 </a>
-<a class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1" href="#">
+<a class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1" href="pages/terms.html">
 <span class="material-symbols-outlined text-base align-middle mr-2">description</span> Terms
 </a>
-<a class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1" href="#">
+<a class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1" href="pages/cancellation.html">
+<span class="material-symbols-outlined text-base align-middle mr-2">undo</span> Cancellation
+</a>
+<a class="px-4 py-2.5 text-sm font-semibold text-text-main dark:text-white hover:bg-white/20 dark:hover:bg-white/10 rounded-lg transition-all hover:translate-x-1" href="pages/contact.html">
 <span class="material-symbols-outlined text-base align-middle mr-2">mail</span> Contact
 </a>
 
@@ -309,7 +336,7 @@ Login
                         Inventory management, real-time sales tracking, customer relationship management, and automated WhatsApp alerts—all in one platform built for modern pharmacies.
                     </p>
 <div class="flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start">
-<a href="https://medstocksy.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white h-11 md:h-12 px-6 md:px-7 rounded-full text-sm font-bold transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 flex items-center justify-center gap-2">
+<a href="https://medstocksy.vercel.app/auth?mode=signup" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white h-11 md:h-12 px-6 md:px-7 rounded-full text-sm font-bold transition-all hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 flex items-center justify-center gap-2">
                             Launch Web App
                             <span class="material-symbols-outlined text-xl">arrow_forward</span>
 </a>
@@ -1110,7 +1137,7 @@ function togglePricing() {
                     Get Started Now
                 </button>
 </div>
-<p class="mt-6 text-[10px] text-blue-200/60 font-medium">No complex setup required</p>
+<p class="mt-6 text-[10px] text-blue-200/60 font-medium">No Complex Setup. No Delays </p>
 </div>
 </div>
 </div>
@@ -1125,9 +1152,9 @@ function togglePricing() {
 <div class="flex flex-col items-center md:items-start gap-3">
     <div class="flex items-center gap-3">
         <a href="/" class="flex items-center gap-3 no-underline">
-            <img src="../dashboard/assets/medstocky.png" alt="MedStocksy logo" class="h-9 sm:h-10 md:h-11 w-auto rounded-md shadow-sm"/>
+            <img src="pages/medstocky.png" alt="MedStocksy logo" class="h-9 sm:h-10 md:h-11 w-auto rounded-md shadow-sm"/>
             <div>
-                <h3 class="font-black text-sm text-text-main dark:text-white">MedStocksy</h3>
+                <h3 class="font-black text-sm text-text-main dark:text-white">MedStocksy OS</h3>
                 <p class="text-[10px] text-text-muted font-semibold">Pharmacy Operations</p>
             </div>
         </a>
@@ -1146,10 +1173,10 @@ function togglePricing() {
 <div class="flex flex-col items-center md:items-start gap-2">
 <p class="text-[10px] font-bold text-text-muted uppercase tracking-wide">Legal</p>
 <div class="flex gap-4 md:flex-col md:gap-2">
-<a href="#" onclick="openPrivacyModal(event)" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">Privacy & Policy</a>
-<a href="#" onclick="openAboutModal(event)" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">About Us</a>
-<a href="#" onclick="openTermsModal(event)" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">Terms & Condition</a>
-<a href="#" onclick="openContactModal(event)" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">Contact Us</a>
+<a href="pages/privacy.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">Privacy & Policy</a>
+<a href="pages/terms.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">Terms & Condition</a>
+<a href="pages/cancellation.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1 cursor-pointer">Cancellation & Refund</a>
+<a href="pages/contact.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Contact</a>
 </div>
 </div>
 </div>
@@ -1158,7 +1185,7 @@ function togglePricing() {
 <p>© 2026 MedStocksy</p>
 <div class="flex gap-6">
 <a href="#" class="opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300 flex items-center gap-1">
-<span class="material-symbols-outlined text-xs">open_in_new</span>
+<span class="material-symbols-outlined text-xs">open_in_new</span> Live App
 </a>
 </div>
 </div>
@@ -1223,96 +1250,6 @@ function togglePricing() {
         </div>
     </div>
 </div>
-
-<div id="aboutModal" class="privacy-modal-backdrop fixed inset-0 z-[100] hidden flex items-center justify-center p-4 overflow-y-auto">
-    <div class="privacy-modal-content rounded-3xl p-6 md:p-8 w-full max-w-2xl relative mt-12 md:mt-0 pr-12">
-        <button onclick="closeAboutModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-black hover:text-primary transition-colors z-50">
-            <span class="material-symbols-outlined text-2xl">close</span>
-        </button>
-        
-        <div class="overflow-y-auto max-h-[70vh] pr-2 custom-scrollbar">
-            <h2 class="text-2xl md:text-3xl font-black text-black mb-6">About Us</h2>
-            <div class="text-xs md:text-sm text-black space-y-4 leading-relaxed">
-                <p class="text-lg text-slate-400 leading-relaxed">
-                A cloud-based pharmacy and medical store management platform developed to enable efficient, accurate, and compliant business operations.
-            </p>
-        </header>
-
-        <section class="mb-12">
-            <p class="leading-relaxed mb-6">
-                The platform supports pharmacies in managing inventory, billing, customer data, and operational workflows through a secure and centralized web application. Medstocksy is designed with a focus on stability, clarity, and scalability, making it suitable for both independent pharmacies and growing healthcare businesses.
-            </p>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl font-semibold text-white mb-4">Our Platform</h2>
-            <p class="leading-relaxed mb-4">
-                Medstocksy delivers a unified system that covers essential pharmacy operations, including inventory control, batch and expiry tracking, billing, and customer relationship management. The platform is accessible across multiple devices, allowing authorized users to manage and monitor operations in real time.
-            </p>
-            <p class="leading-relaxed italic text-slate-400">
-                As a Software as a Service (SaaS) solution, Medstocksy eliminates the need for on-premise installations while ensuring consistent updates, data security, and reliable system performance.
-            </p>
-        </section>
-
-        <section class="mb-12 bg-slate-900/50 border border-slate-800 rounded-2xl p-8 shadow-xl">
-            <h2 class="text-2xl font-semibold text-white mb-4">Our Unique Value</h2>
-            <p class="mb-6">
-                The core strength of Medstocksy lies in its <strong>single, complete Pharmacy Operating System</strong> approach. Instead of fragmented tools, we provide all critical functions within one structured platform.
-            </p>
-            
-            <h3 class="text-indigo-400 font-medium mb-3 uppercase tracking-wider text-sm">Key Differentiators</h3>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-500 mt-1">•</span>
-                    <span>Fully cloud-based architecture with multi-device access</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-500 mt-1">•</span>
-                    <span>Paid-first access model for serious business users</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-500 mt-1">•</span>
-                    <span>Simplified workflows aligned with real operations</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-500 mt-1">•</span>
-                    <span>Centralized inventory, billing, and CRM</span>
-                </li>
-                <li class="flex items-start gap-3">
-                    <span class="text-indigo-500 mt-1">•</span>
-                    <span>Startup-friendly with enterprise reliability</span>
-                </li>
-            </ul>
-        </section>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-            <section>
-                <h2 class="text-xl font-semibold text-white mb-3">Purpose and Approach</h2>
-                <p class="text-sm leading-relaxed">
-                    Built to reduce dependency on manual processes and improve visibility across operations. Structured to reflect common pharmacy workflows in India while remaining adaptable for future regulations.
-                </p>
-            </section>
-            <section>
-                <h2 class="text-xl font-semibold text-white mb-3">Data Responsibility</h2>
-                <p class="text-sm leading-relaxed">
-                    Medstocksy operates strictly as a technology service provider. Users are responsible for ensuring lawful and compliant use of the platform and account security.
-                </p>
-            </section>
-        </div>
-
-        <footer class="mt-16 pt-8 border-t border-slate-800 text-center">
-            <h2 class="text-lg font-semibold text-white mb-2">Our Commitment</h2>
-            <p class="max-w-2xl mx-auto text-slate-400 text-sm">
-                Medstocksy is committed to maintaining system integrity, data security, and transparent operational policies. Continuous improvement and adherence to industry standards remain central to our delivery.
-            </p>
-            </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 <div id="termsModal" class="terms-modal-backdrop fixed inset-0 z-[100] hidden flex items-center justify-center p-4 overflow-y-auto">
     <div class="terms-modal-content rounded-3xl p-6 md:p-8 w-full max-w-2xl relative mt-12 md:mt-0 pr-12">
@@ -1397,44 +1334,68 @@ function togglePricing() {
         </div>
     </div>
 </div>
-<div id="contactModal" class="privacy-modal-backdrop fixed inset-0 z-[100] hidden flex items-center justify-center p-4 overflow-y-auto">
-    <div class="privacy-modal-content rounded-3xl p-6 md:p-8 w-full max-w-2xl relative mt-12 md:mt-0 pr-12">
-        <button onclick="closeContactModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-black hover:text-primary transition-colors z-50">
+
+<div id="cancellationModal" class="hidden fixed inset-0 cancellation-modal-backdrop flex items-center justify-center p-4 z-50 overflow-y-auto">
+    <div class="cancellation-modal-content rounded-3xl max-w-2xl w-full max-h-[70vh] overflow-y-auto pr-12 relative" onclick="event.stopPropagation()">
+        <button onclick="closeCancellationModal()" class="absolute top-4 right-4 md:top-6 md:right-6 text-black dark:text-black hover:text-primary transition-colors z-50">
             <span class="material-symbols-outlined text-2xl">close</span>
         </button>
-        
-        <div class="overflow-y-auto max-h-[70vh] pr-2 custom-scrollbar text-black">
-            <h2 class="text-2xl md:text-3xl font-black mb-2">Contact Us</h2>
-            <p class="text-sm text-gray-600 mb-8">For business inquiries, support, or general communication, reach out to us below.</p>
+        <div class="p-6 md:p-8 space-y-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-black mb-6">Cancellation & Refund Policy</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-2">Email Support</h3>
-                        <p class="text-sm font-semibold selection:bg-indigo-100">contactarham03@gmail.com</p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-2">Sales & Support</h3>
-                        <p class="text-sm font-semibold">+91 8881865349</p>
-                        <p class="text-sm font-semibold">+91 8957784793</p>
-                    </div>
-
-                    <div class="bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
-                        <h3 class="text-xs font-bold uppercase tracking-widest text-indigo-600 mb-2">Support Hours</h3>
-                        <p class="text-sm font-medium">Monday to Friday</p>
-                        <p class="text-sm font-bold text-indigo-900">10:00 AM to 6:00 PM IST</p>
-                        <p class="text-[10px] mt-2 text-gray-500 italic">Requests received outside hours will be addressed the next working day.</p>
-                    </div>
-                </div>
-
-                <div class="flex flex-col justify-center items-center bg-gray-50 rounded-2xl p-6 border border-dashed border-gray-300">
-                    <span class="material-symbols-outlined text-4xl text-gray-400 mb-3">mail</span>
-                    <p class="text-center text-xs text-gray-500 mb-4">The fastest way to get a response is via email or WhatsApp.</p>
-                    <a href="mailto:contactarham03@gmail.com" class="w-full text-center bg-black text-white text-sm font-bold py-3 rounded-xl hover:bg-gray-800 transition-all">
-                        Send an Email
-                    </a>
-                </div>
+            <div>
+                <p class="font-semibold text-black">1. Cancellation Eligibility</p>
+                <p class="text-black">You may cancel your subscription within 15 (fifteen) days from the date of purchase, as per the Consumer Protection Act, 2019. After 15 days, no cancellation or refund will be processed.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">2. One Refund Per User</p>
+                <p class="text-black">Every user of Medstocksy is entitled to only ONE (1) refund during their entire association with the platform. After the first refund is processed, no further refunds will be granted under any circumstances.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">3. Invoice Date as Reference</p>
+                <p class="text-black">The date mentioned on your invoice is considered the purchase date. The 15-day cancellation window starts from this date. Any cancellation request submitted after 15 days from the invoice date will be rejected.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">4. Subscription Upgrade Rules</p>
+                <p class="text-black">If you have upgraded your subscription to a higher plan, you are NOT eligible for a refund on the entire amount. Refunds will only be issued for the DIFFERENCE between the plans, if applicable, and only within the 15-day window from the original purchase date.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">5. No Refund After 15 Days</p>
+                <p class="text-black">Any cancellation request submitted after 15 days from the purchase date will be REJECTED. No refunds, partial refunds, or adjustments will be provided beyond the 15-day window, regardless of the reason for cancellation.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">6. Cancellation Process</p>
+                <p class="text-black">To request a cancellation and refund, you must submit a written request to Medstocksy support team at support@medstocksy.com or through the in-app support system. Phone calls, emails to other addresses, or informal requests will not be considered.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">7. Processing Time</p>
+                <p class="text-black">Once your cancellation request is approved, the service provider (payment gateway or bank) will process the refund within 20 (twenty) working days. Medstocksy is not responsible for delays beyond 20 working days, as these depend on your bank's processing time.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">8. Required Information</p>
+                <p class="text-black">To process your cancellation and refund, you must provide: (i) Your registered account email or user ID, (ii) Invoice number and date, (iii) Payment method used (Card, Net Banking, UPI, etc.), (iv) Bank account or card details (last 4 digits) for refund verification, and (v) Reason for cancellation (optional but helpful).</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">9. Service Provider Charges Deduction</p>
+                <p class="text-black">Medstocksy may deduct a nominal service provider processing fee (typically 2-5% of the refund amount, or as per your bank's charges) from your refund if explicitly permitted by law. The refund amount will be reduced by this fee, which is non-negotiable.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">10. User Liability & Disclaimer</p>
+                <p class="text-black">Once your account is cancelled, all access to Medstocksy services, data, and features will be immediately terminated. You are responsible for downloading and backing up all your data before cancellation. Medstocksy is NOT responsible for any data loss, business interruption, or loss of revenue following account cancellation. Your use of the services for more than 15 days implies acceptance of the subscription terms and waives your right to a refund.</p>
+            </div>
+            
+            <div>
+                <p class="font-semibold text-black">11. Referral Users Exception</p>
+                <p class="text-black">If you are a user referred by a referral partner or enterprise client, special refund terms may apply as per your contract. In such cases, your referral agreement will supersede this policy, and you must contact your referral manager for refund authorization.</p>
             </div>
         </div>
     </div>
@@ -1457,29 +1418,6 @@ function togglePricing() {
             closePrivacyModal();
         }
     });
-    
-    function openAboutModal(event) {
-    event.preventDefault(); // Prevents page jump
-    const modal = document.getElementById('aboutModal');
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Lock background scroll
-}
-
-function closeAboutModal() {
-    const modal = document.getElementById('aboutModal');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // Restore background scroll
-}
-
-// Optional: Close modal if clicking on the dark backdrop
-window.addEventListener('click', function(event) {
-    const aboutModal = document.getElementById('aboutModal');
-    if (event.target === aboutModal) {
-        closeAboutModal();
-    }
-});
-
-    
 
     function openTermsModal(e) {
         e.preventDefault();
@@ -1498,31 +1436,22 @@ window.addEventListener('click', function(event) {
         }
     });
 
-    function openContactModal(event) {
-    event.preventDefault();
-    const modal = document.getElementById('contactModal');
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // Stop background scrolling
-}
-
-function closeContactModal() {
-    const modal = document.getElementById('contactModal');
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-}
-
-// Updated Global Click Listener (Handles all three modals)
-window.addEventListener('click', function(event) {
-    const about = document.getElementById('aboutModal');
-    const privacy = document.getElementById('privacyModal');
-    const contact = document.getElementById('contactModal');
+    function openCancellationModal(e) {
+        e.preventDefault();
+        document.getElementById('cancellationModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
     
-    if (event.target === about) closeAboutModal();
-    if (event.target === privacy) closePrivacyModal();
-    if (event.target === contact) closeContactModal();
-});
-
-
+    function closeCancellationModal() {
+        document.getElementById('cancellationModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+    
+    document.getElementById('cancellationModal')?.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeCancellationModal();
+        }
+    });
 
     var themeToggleBtn = document.getElementById('theme-toggle');
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
