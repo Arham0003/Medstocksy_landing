@@ -1,20 +1,20 @@
 {
   "version": 2,
-  "outputDirectory": ".",
+  "outputDirectory": "dashboard",
   "builds": [
     {
-      "src": "**",
+      "src": "dashboard/**",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/dashboard/index.html"
+      "source": "/",
+      "destination": "/index.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "source": "/pages/(.*)",
+      "destination": "/pages/$1"
     }
   ]
 }
