@@ -1,15 +1,19 @@
 {
-  "name": "medstocksy-landing-page",
+  "name": "medstocksy-landing",
   "version": "1.0.0",
-  "description": "Landing page for MedStocksy - Pharmacy CRM & Inventory Management",
-  "private": true,
+  "description": "MedStocksy Landing Page - Pharmacy CRM & Inventory Management",
   "scripts": {
     "dev": "serve dashboard",
     "build": "echo 'Static site - no build required'",
     "start": "serve dashboard"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "serve": "^14.2.0"
-  }
+  "keywords": [
+    "pharmacy",
+    "crm",
+    "inventory",
+    "medstocksy",
+    "landing-page"
+  ],
+  "author": "MedStocksy Team",
+  "license": "MIT"
 }
