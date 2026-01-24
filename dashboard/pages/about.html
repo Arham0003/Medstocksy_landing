@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MedStocksy - Pharmacy Management Software</title>
+    <link rel="icon" type="image/png" href="../pages/medstocky.png">
+    <meta name="description" content="Learn about MedStocksy, India's premier pharmacy inventory management system and CRM platform. Built specifically for pharmacies, medical stores, and healthcare retailers.">
+    <meta name="keywords" content="about medstocksy, pharmacy software company, medical store management, pharmacy crm, inventory management india">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://medstocksy.vercel.app/dashboard/pages/about.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066FF',
+                        'primary-light': '#E6F0FF',
+                        'text-main': '#2D3748',
+                        'text-muted': '#718096',
+                    }
+                }
+            }
+        }
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F4F7FE] dark:bg-[#1a2847] text-text-main font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-[#242d52]/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <img src="../pages/medstocky.png" alt="MedStocksy logo" class="h-9 sm:h-10 md:h-11">
+                    <div class="flex flex-col leading-none">
+                        <span class="text-sm sm:text-base md:text-lg font-black tracking-tight text-text-main dark:text-white">MedStocksy</span>
+                        <span class="text-[7px] sm:text-[8px] md:text-[9px] font-bold uppercase tracking-widest" style="background: linear-gradient(135deg, #7B5CFA 0%, #6A4DE6 50%, #4F3CC9 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;">Built For Pharmacy</span>
+                    </div>
+                </a>
+                <!-- <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 transition-colors">
+                    <span id="theme-toggle-dark-icon" class="material-symbols-outlined text-gray-800 dark:hidden">dark_mode</span>
+                    <span id="theme-toggle-light-icon" class="material-symbols-outlined text-yellow-500 hidden dark:block">light_mode</span>
+                </button> -->
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="../index.html" class="flex items-center gap-2 text-primary hover:text-primary-dark mb-8 font-semibold">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Back
+            </a>
+
+            <div class="bg-white dark:bg-[#242d52] rounded-3xl p-8 md:p-12 shadow-lg dark:shadow-xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-text-main dark:text-white mb-8">About MedStocksy</h1>
+                
+                <div class="space-y-8 text-text-main dark:text-gray-300">
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">About MedStocksy - Smart Pharmacy Inventory Management & CRM Platform</h2>
+                        <p>MedStocksy is a cloud-based pharmacy inventory management system and customer relationship management (CRM) platform designed specifically for pharmacies, medical stores, and healthcare retailers across India. Since our launch, we've been committed to transforming how pharmacies manage their operations—from stock tracking to customer relationships—with an intelligent, user-friendly platform built by pharmacy professionals, for pharmacy professionals.</p>
+                        
+                        <p class="mt-4">We understand the unique challenges that pharmacy owners and managers face daily: managing thousands of medicine SKUs, preventing stock-outs and wastage, tracking expiry dates across multiple batches, maintaining patient records, and building long-term customer loyalty. MedStocksy is the pharmacy management software that solves all of these problems in one integrated platform.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Our Mission</h2>
+                        <p>Our mission is to empower Indian pharmacies with smart technology that simplifies inventory management, strengthens customer relationships, and drives business growth. We believe every pharmacy—whether it's a small independent shop or a larger chain—deserves access to enterprise-grade tools without the complexity or cost.</p>
+                        
+                        <p class="mt-4">By automating manual processes and providing real-time insights, we help pharmacy owners save time, reduce errors, prevent revenue loss, and focus on what matters most: serving their patients better.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">What Makes MedStocksy Different</h2>
+                        <p>Unlike generic inventory management software, MedStocksy is purpose-built for pharmacies. Every feature, every workflow, and every decision we make considers the specific needs of pharmacy operations.</p>
+                        
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Smart Pharmacy Inventory Tracking</h3>
+                            <p>Our core strength is real-time pharmacy stock management. MedStocksy helps you:</p>
+                            <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                <li>Monitor medicine stock levels 24/7 from any device</li>
+                                <li>Receive automatic low-stock alerts before you run out of critical medications</li>
+                                <li>Track expiry dates and batch numbers automatically—preventing expired medicine sales and stock wastage</li>
+                                <li>Manage multi-warehouse or multi-store inventory from a centralized dashboard</li>
+                            </ul>
+                            
+                            <p class="mt-3">For pharmacies managing hundreds or thousands of products, this real-time visibility eliminates the guesswork and prevents costly stockouts that lose sales and disappoint patients.</p>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h3 class="text-xl font-bold text-text-main dark:text-white mb-3">Advanced Customer Relationship Management</h3>
+                            <p>What sets MedStocksy apart is our integrated pharmacy CRM system paired with an industry-first feature: WhatsApp prescription refill reminders. This is something no other pharmacy management software offers.</p>
+                            
+                            <p class="mt-3">Our customer relationship management features include:</p>
+                            <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                <li>Complete customer profiles with full purchase history, medication preferences, and prescription details</li>
+                                <li>Smart prescription tracking that remembers what medicines patients buy regularly and how often they refill</li>
+                                <li>Automated WhatsApp refill reminders that remind patients when their medications are due for refill—driving repeat sales automatically</li>
+                                <li>Personalized patient communication that builds trust and loyalty without any additional effort from your staff</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Why WhatsApp Prescription Reminders Matter</h2>
+                        <p>Patients often forget when to refill their regular medications. With MedStocksy's unique WhatsApp prescription reminder system, you can:</p>
+                        <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                            <li>Automatically send timely refill reminders to patients based on their prescription frequency</li>
+                            <li>Increase customer lifetime value by ensuring patients never miss a refill</li>
+                            <li>Build stronger relationships through personalized, helpful communication</li>
+                            <li>Reduce manual follow-up calls and SMS costs</li>
+                            <li>Improve medication compliance and patient health outcomes</li>
+                        </ul>
+                        
+                        <p class="mt-4">This feature alone has helped our pharmacy users increase their repeat customer revenue by an average of 12-15%. No other pharmacy software platform offers this level of integrated prescription management and patient communication.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Key Features of Our Pharmacy Inventory Management System</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">Real-Time Stock & Expiry Management</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Instant stock level updates with every sale and return</li>
+                                    <li>Automatic expiry date tracking and alerts</li>
+                                    <li>Batch number management for regulatory compliance</li>
+                                    <li>Low-stock alerts to prevent stockouts</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">Pharmacy CRM & Customer Management</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Build detailed customer profiles automatically</li>
+                                    <li>Track prescription history and medication preferences</li>
+                                    <li>Manage both long-term chronic patients and one-time customers</li>
+                                    <li>Segment customers for targeted communication</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">WhatsApp Integration & Automated Refill Alerts</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Send WhatsApp prescription reminders automatically</li>
+                                    <li>Schedule refill alerts based on medicine frequency</li>
+                                    <li>Increase patient compliance and repeat sales</li>
+                                    <li>Reduce manual follow-up work for your team</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">Complete Billing & Sales Management</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Fast, GST-compliant invoicing</li>
+                                    <li>Automatic medicine pricing and margins</li>
+                                    <li>Link every sale to patient profiles</li>
+                                    <li>Track sales trends and high-performing products</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">Advanced Pharmacy Analytics & Reporting</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Sales reports with profit margins</li>
+                                    <li>Inventory forecasting to optimize stock levels</li>
+                                    <li>Customer activity and retention analytics</li>
+                                    <li>Product-level performance insights</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">Mobile & Desktop Accessibility</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Manage your pharmacy from anywhere, anytime</li>
+                                    <li>Full functionality on mobile devices and tablets</li>
+                                    <li>Cloud-based platform—no complex installation</li>
+                                    <li>Works seamlessly across multiple devices and users</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-bold text-text-main dark:text-white">Role-Based Access Control</h3>
+                                <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                                    <li>Multiple user accounts with customized permissions</li>
+                                    <li>Separate access for owners, managers, and staff</li>
+                                    <li>Maintain data security while enabling team collaboration</li>
+                                    <li>Audit trails for compliance and training</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Who Uses MedStocksy</h2>
+                        <p>MedStocksy serves hundreds of pharmacies across India, from small independent medical shops to larger multi-store chains. Our users include:</p>
+                        <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                            <li>Independent pharmacy owners managing 1-2 stores</li>
+                            <li>Medical shop managers in busy urban areas</li>
+                            <li>Multi-location pharmacy chains</li>
+                            <li>Hospital and clinic pharmacies</li>
+                            <li>Pharmacy chains with 50-5,000 inventory items</li>
+                        </ul>
+                        
+                        <p class="mt-4">Whether you're managing a high-volume urban pharmacy or a community medical shop in smaller towns, MedStocksy scales with your business.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Why Pharmacies Choose MedStocksy</h2>
+                        <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-2 ml-2 mt-2">
+                            <li><span class="font-semibold">Saves Time & Reduces Manual Work</span> Manual inventory tracking in notebooks, spreadsheets, or basic systems wastes hours every week. MedStocksy automates routine tasks—from stock updates to refill reminders—freeing up your staff to focus on customer service.</li>
+                            <li><span class="font-semibold">Prevents Revenue Loss Through Stock-Outs</span> Missing out on sales because you're out of stock directly impacts your bottom line. Our real-time inventory system ensures you always know what's available, preventing missed sales opportunities.</li>
+                            <li><span class="font-semibold">Reduces Stock Wastage & Expired Medicine</span> Every expired medicine that sits on your shelf is lost revenue. Automatic expiry tracking alerts you months in advance, ensuring you can sell medicines before they expire.</li>
+                            <li><span class="font-semibold">Builds Long-Term Customer Loyalty</span> Patients appreciate timely refill reminders that help them stay compliant with their medications. Our WhatsApp reminder system transforms one-time buyers into repeat customers—proven to increase customer lifetime value by 12-15%.</li>
+                            <li><span class="font-semibold">Makes Better Business Decisions</span> Our analytics and reporting features give you insights into what's selling, what's not, profit margins by product category, and which customers drive the most revenue. Data-driven decisions help you stock smarter and grow faster.</li>
+                            <li><span class="font-semibold">Simple, No-Nonsense Pricing</span> We believe powerful pharmacy software shouldn't cost a fortune. Our plans start at just ₹349/month for professionals—with unlimited products, WhatsApp CRM, and inventory forecasting. Annual plans offer 20% savings.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Our Commitment to Your Pharmacy</h2>
+                        <p>At MedStocksy, we're not just building software—we're building a partner for your pharmacy's success. Here's what we commit to:</p>
+                        <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-2 ml-2 mt-2">
+                            <li><span class="font-semibold">Security & Data Privacy</span> Your pharmacy data and patient information are protected with enterprise-grade security. We comply with Indian data protection laws and never share your data with third parties.</li>
+                            <li><span class="font-semibold">Continuous Improvement</span> We regularly update our platform with new features based on feedback from pharmacy owners and managers. Your success directly influences our product roadmap.</li>
+                            <li><span class="font-semibold">Dedicated Support</span> Our support team understands pharmacy operations because we've worked with hundreds of pharmacies. We're here to help you get the most from MedStocksy.</li>
+                            <li><span class="font-semibold">Transparent Pricing</span> No hidden fees. No surprise charges. Our pricing is straightforward and predictable—so you always know exactly what you're paying for.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">The MedStocksy Difference in Numbers</h2>
+                        <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                            <li>2,000+ active pharmacies trust MedStocksy for their daily operations</li>
+                            <li>84% customer retention rate (12% higher than industry average) through our WhatsApp refill system</li>
+                            <li>5,400+ medicine catalog items supported across our platform</li>
+                            <li>892+ daily WhatsApp alerts helping patients remember their refills</li>
+                            <li>1,250+ average daily transactions processed by our pharmacy users</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">Getting Started With Pharmacy Inventory Management</h2>
+                        <p>Switching to MedStocksy takes less than an hour. There's no complex setup, no lengthy onboarding—just quick registration, a few minutes of configuration, and you're ready to start managing your pharmacy smarter.</p>
+                        
+                        <p class="mt-4">Whether you're currently using spreadsheets, a basic POS system, or another pharmacy management platform, MedStocksy makes the transition seamless. We even help you import your existing product catalog.</p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-text-main dark:text-white mb-4">About Pharmacy Inventory Management & Why It Matters</h2>
+                        <p>Pharmacy inventory management isn't just about tracking stock—it's about optimizing your entire business. An effective pharmacy stock management system helps you:</p>
+                        <ul class="list-disc list-inside text-text-main dark:text-gray-300 space-y-1 ml-2 mt-2">
+                            <li>Improve cash flow by preventing capital tied up in excess inventory</li>
+                            <li>Increase sales through better stock availability and customer follow-up</li>
+                            <li>Reduce losses from expired medicines and stock discrepancies</li>
+                            <li>Enhance patient satisfaction with timely medication availability</li>
+                            <li>Streamline compliance with proper record-keeping and GST billing</li>
+                        </ul>
+                        
+                        <p class="mt-4">Modern pharmacies need more than a basic POS system—they need an integrated pharmacy management platform that handles inventory, customer relationships, and business analytics in one place. That's exactly what MedStocksy delivers.</p>
+                    </div>
+
+                    <div class="bg-primary-light dark:bg-blue-900/30 p-6 rounded-lg border-l-4 border-primary">
+                        <h3 class="text-xl font-bold text-text-main dark:text-white mb-2">Ready to transform your pharmacy with intelligent inventory management and customer relationship tools?</h3>
+                        <p class="text-lg text-text-main dark:text-gray-300"><span class="font-bold">Get Started with MedStocksy Today</span></p>
+                        <p class="mt-2 text-text-main dark:text-gray-300">MedStocksy is proudly built for Indian pharmacies, by pharmacy professionals. Trusted by pharmacy owners across India for smart inventory management, pharmaceutical CRM, and prescription refill automation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white dark:bg-[#242d52] border-t border-gray-200 dark:border-gray-700 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <img src="../pages/medstocky.png" alt="MedStocksy" class="h-12 mb-2">
+                    <p class="text-xs text-text-muted text-center md:text-left">Empowering healthcare retail with modern inventory management.</p>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <p class="text-[10px] font-bold text-text-muted uppercase tracking-wide">Product</p>
+                    <div class="flex gap-4 md:flex-col md:gap-2">
+                        <a href="../index.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Dashboard</a>
+                        <a href="../index.html#features" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Features</a>
+                        <a href="../index.html#pricing" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Pricing</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <p class="text-[10px] font-bold text-text-muted uppercase tracking-wide">Legal</p>
+                    <div class="flex gap-4 md:flex-col md:gap-2">
+                        <a href="privacy.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Privacy & Policy</a>
+                        <a href="terms.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Terms & Condition</a>
+                        <a href="cancellation.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Cancellation & Refund</a>
+                        <a href="contact.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">Contact</a>
+                        <a href="about.html" class="text-xs text-text-muted hover:text-primary transition-all duration-300 font-semibold hover:translate-x-1">About</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] md:text-[10px] text-text-muted font-semibold border-t border-gray-200 dark:border-gray-700 pt-8">
+                <p>© 2026 MedStocksy</p>
+                <div class="flex gap-6">
+                    <a href="#" class="opacity-70 hover:opacity-100 hover:text-primary transition-all duration-300 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs">open_in_new</span> Live App
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var themeToggleBtn = document.getElementById('theme-toggle');
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (document.documentElement.classList.contains('dark')) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
