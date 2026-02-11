@@ -4,6 +4,10 @@ Allow: /
 # Sitemap location
 Sitemap: https://medstocksy.in/sitemap.xml
 
+# Favicon for search engines
+# This helps search engines display your site icon
+# The favicon is located at: https://medstocksy.in/dashboard/pages/medstocky.png
+
 # Disallow certain file types that shouldn't be indexed
 Disallow: /*.json$
 Disallow: /*.txt$
