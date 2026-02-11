@@ -74,6 +74,13 @@
                 scroll-snap-type: y mandatory;
             }
         }
+        /* Enhanced smooth scrolling for all devices */
+        *, *::before, *::after {
+            scroll-behavior: smooth !important;
+        }
+        body {
+            -webkit-overflow-scrolling: touch; /* For iOS Safari */
+        }
         section, footer {
             scroll-snap-align: start;
             scroll-snap-stop: always;
