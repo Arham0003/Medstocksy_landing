@@ -5,7 +5,42 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Medstocksy - Pharmacy CRM &amp; Inventory</title>
 <link rel="icon" type="image/png" href="pages/medstocky.png">
+<link rel="canonical" href="https://medstocksy.in/dashboard/index.html">
 <link rel="manifest" href="../manifest.json">
+<!-- FAQ Schema for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is MedStocksy?",
+      "acceptedAnswer": {"@type": "Answer", "text": "MedStocksy is a cloud-based pharmacy inventory management system and CRM platform for Indian pharmacies."}
+    },
+    {
+      "@type": "Question",
+      "name": "How does inventory management work?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Real-time tracking with automatic low-stock alerts, expiry management, and multi-warehouse support."}
+    },
+    {
+      "@type": "Question",
+      "name": "What is WhatsApp reminder system?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Automatic prescription refill reminders to patients via WhatsApp, increasing repeat customers by 12-15%."}
+    },
+    {
+      "@type": "Question",
+      "name": "Pricing?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Starts at ₹349/month with unlimited products, 20% savings on annual plans."}
+    },
+    {
+      "@type": "Question",
+      "name": "GST billing support?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes, complete GST-compliant billing and invoicing for pharmacies."}
+    }
+  ]
+}
+</script>
 <script>
     if (localStorage.getItem('color-theme') === 'dark') {
         document.documentElement.classList.add('dark');
@@ -1167,6 +1202,43 @@ function togglePricing() {
 </div>
 </div>
 </div>
+
+<section id="faq" class="py-16 md:py-20 px-4 bg-white dark:bg-surface-dark">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-black text-center text-text-main dark:text-white mb-4">Frequently Asked Questions</h2>
+<p class="text-text-muted text-center mb-12 max-w-2xl mx-auto">Find answers about MedStocksy pharmacy software</p>
+
+<details class="group bg-gray-50 dark:bg-gray-800 rounded-2xl cursor-pointer">
+<summary class="flex items-center justify-between p-6 font-semibold">What is MedStocksy?<span class="material-symbols-outlined">expand_more</span></summary>
+<div class="px-6 pb-6 text-text-muted"><p>Cloud-based pharmacy inventory management for Indian pharmacies.</p></div>
+</details>
+
+<details class="group bg-gray-50 dark:bg-gray-800 rounded-2xl cursor-pointer">
+<summary class="flex items-center justify-between p-6 font-semibold">How does inventory work?<span class="material-symbols-outlined">expand_more</span></summary>
+<div class="px-6 pb-6 text-text-muted"><p>Real-time tracking with low-stock alerts and expiry management.</p></div>
+</details>
+
+<details class="group bg-gray-50 dark:bg-gray-800 rounded-2xl cursor-pointer">
+<summary class="flex items-center justify-between p-6 font-semibold">WhatsApp reminders?<span class="material-symbols-outlined">expand_more</span></summary>
+<div class="px-6 pb-6 text-text-muted"><p>Automatic prescription refill alerts to patients.</p></div>
+</details>
+
+<details class="group bg-gray-50 dark:bg-gray-800 rounded-2xl cursor-pointer">
+<summary class="flex items-center justify-between p-6 font-semibold">Pricing?<span class="material-symbols-outlined">expand_more</span></summary>
+<div class="px-6 pb-6 text-text-muted"><p>Starts at ₹349/month with unlimited products.</p></div>
+</details>
+
+<details class="group bg-gray-50 dark:bg-gray-800 rounded-2xl cursor-pointer">
+<summary class="flex items-center justify-between p-6 font-semibold">GST billing?<span class="material-symbols-outlined">expand_more</span></summary>
+<div class="px-6 pb-6 text-text-muted"><p>Yes, complete GST-compliant invoicing.</p></div>
+</details>
+
+<details class="group bg-gray-50 dark:bg-gray-800 rounded-2xl cursor-pointer">
+<summary class="flex items-center justify-between p-6 font-semibold">Mobile support?<span class="material-symbols-outlined">expand_more</span></summary>
+<div class="px-6 pb-6 text-text-muted"><p>Yes, works on any device, anywhere.</p></div>
+</details>
+</div>
+</section>
 
 <footer class="absolute bottom-0 left-0 right-0 py-8 md:py-10 border-t border-white/10 dark:border-white/5 bg-gradient-to-r from-surface-light/80 via-primary/5 to-surface-light/80 dark:from-surface-dark/80 dark:via-primary/10 dark:to-surface-dark/80 backdrop-blur-xl shadow-2xl shadow-primary/10 dark:shadow-primary/5">
 <div class="absolute inset-0 opacity-40 pointer-events-none -z-10">
