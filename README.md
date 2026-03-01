@@ -1,103 +1,98 @@
 # MedStocksy Landing Page
 
-A modern, high-performance landing page for MedStocksy - Pharmacy Management Software for Indian retail chemists.
+A professional landing page for MedStocksy - a medical inventory management solution.
 
-##🚀 Features
+## 🚀 Features
 
-- **Lightweight & Fast**: Optimized for performance with minimal dependencies
-- **SEO Optimized**: Complete SEO setup with sitemap, robots.txt, and structured data
-- **Mobile Responsive**: Fully responsive design using Tailwind CSS
-- **Dark Mode**: Built-in dark/light theme toggle
-- **PWA Ready**: Web App Manifest for installable experience
-- **Vercel Optimized**: Ready for one-click deployment
+- **Responsive Design**: Works on all device sizes
+- **SEO Optimized**: Includes robots.txt and sitemap.xml for search engines
+- **Performance Optimized**: Cached assets and optimized loading
+- **Modern Web Standards**: PWA ready with manifest.json
+- **Fast Loading**: Optimized for Core Web Vitals
 
-##📁 Project Structure
+## 📁 File Structure
 
 ```
 MedStocksy-Page/
-├── index.html          # Main landing page
-├── manifest.json       # PWA manifest
-├── robots.txt         # Search engine crawler rules
-├── sitemap.xml        # XML sitemap for SEO
-├── vercel.json        # Vercel deployment configuration
-├── package.json       # Project metadata and scripts
-├── assets/            # Static assets
-│   ├── logo/         # Logo files
-│  └── testimonial/  # Testimonial images
-└── README.md         # This file
+├── index.html              # Main landing page
+├── assets/                 # Images and media files
+│   ├── logo/               # Logo files
+│   └── testimonial/        # Testimonial images
+├── manifest.json           # PWA manifest
+├── robots.txt              # Search engine directives
+├── sitemap.xml             # Site map for crawlers
+├── vercel.json             # Vercel deployment configuration
+└── README.md               # This file
 ```
 
-##🛠️ Development
+## 🛠️ Technologies Used
 
-### Local Development
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Vercel for deployment
 
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
-### Vercel Deployment
-
-This project is optimized for Vercel deployment:
-
-1. Push to GitHub
-2. Connect repository to Vercel
-3. Deploy with zero configuration
+## ⚙️ Vercel Configuration
 
 The `vercel.json` file includes:
-- Static file serving configuration
-- Cache optimization headers
+- Custom cache headers for assets
 - Security headers
-- Route handling
-
-##🔧 Files
-
-### vercel.json
-- Static file serving configuration
-- Cache control headers
-- Security headers (X-Content-Type-Options)
 - GitHub integration
 
-### manifest.json
-- PWA configuration
-- App icons and theme colors
-- Installable web app support
+## 📦 Deployment
 
-### robots.txt
-- Search engine crawler directives
-- Sitemap location reference
-- File exclusion rules
+### Deploy to Vercel
 
-### sitemap.xml
-- Complete site structure for SEO
-- Page priorities and update frequencies
-- All content pages indexed
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Arham0003/Medstocksy_landing)
 
-## 📈 Performance
+### Manual Deployment
 
-- **Core Web Vitals**: Optimized for LCP, FID, CLS
-- **SEO**: Complete metadata and structured data
-- **Accessibility**: WCAG compliant
-- **Mobile**: Responsive design for all devices
+1. Install Vercel CLI: `npm i -g vercel`
+2. Navigate to project directory
+3. Run: `vercel --prod`
 
-##🌐 Live Demo
+### GitHub Integration
 
-[https://www.medstocksy.in](https://www.medstocksy.in)
+The project is configured for automatic deployments:
+1. Push changes to the `main` branch
+2. Vercel automatically builds and deploys
+3. Changes are live within seconds
 
-##📝 License
+## 🔧 Local Development
 
-MIT License - See [LICENSE](LICENSE) file for details
+1. Clone the repository
+2. Navigate to the project directory
+3. Open `index.html` in your browser or use a local server
 
-##🤝 Contributing
+## 📊 SEO & Performance
+
+- **Robots.txt**: Controls search engine crawling
+- **Sitemap.xml**: Helps search engines index the site
+- **Cache Headers**: Optimizes asset loading
+- **Mobile Responsive**: Works on all devices
+
+## 🌐 Production Ready
+
+- Optimized for Google PageSpeed Insights
+- Fast loading times
+- Proper meta tags and structured data
+- Security headers implemented
+
+## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Contact
+
+For any questions or support, please reach out through GitHub issues.
+
+---
+
+Built with ❤️ for MedStocksy
