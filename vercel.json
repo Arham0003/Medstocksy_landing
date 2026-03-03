@@ -1,5 +1,6 @@
 {
-  "outputDirectory": ".",
+  "buildCommand": "bash vercel-build.sh",
+  "outputDirectory": "public",
   "headers": [
     {
       "source": "/assets/(.*)",
